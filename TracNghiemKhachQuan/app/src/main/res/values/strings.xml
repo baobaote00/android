@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TracNghiemKhachQuan</string>
+    <string name="title_1">Câu hỏi 1</string>
+    <string name="noi_dung_1">Nội dung câu hỏi số 1</string>
+    <string name="noi_dung_2">Nội dung câu hỏi số 2</string>
+    <string name="lua_chon_1">Lựa chọn 1</string>
+    <string name="lua_chon_2">Lựa chọn 2</string>
+    <string name="lua_chon_3">Lựa chọn 3</string>
+    <string name="lua_chon_4">Lựa chọn 4</string>
+    <string name="btnKetThuc">Kết thúc</string>
+    <string name="btnPre">&#60;</string>
+    <string name="btnNext">&#62;</string>
+</resources>
