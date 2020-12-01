@@ -1,13 +1,39 @@
 <resources>
     <string name="app_name">TracNghiemKhachQuan</string>
-    <string name="title_1">Câu hỏi 1</string>
-    <string name="noi_dung_1">Nội dung câu hỏi số 1</string>
-    <string name="noi_dung_2">Nội dung câu hỏi số 2</string>
-    <string name="lua_chon_1">Lựa chọn 1</string>
-    <string name="lua_chon_2">Lựa chọn 2</string>
-    <string name="lua_chon_3">Lựa chọn 3</string>
-    <string name="lua_chon_4">Lựa chọn 4</string>
-    <string name="btnKetThuc">Kết thúc</string>
-    <string name="btnPre">&#60;</string>
-    <string name="btnNext">&#62;</string>
+    //Cau hoi 1
+    <string name="lbl_qs1">Noi dung cau hoi so 1:_______ </string>
+    <string name="lbl_chooseA">Lua chon A </string>
+    <string name="lbl_chooseB">Lua chon B </string>
+    <string name="lbl_chooseC">Lua chon C </string>
+    <string name="lbl_chooseD">Lua chon D </string>
+    <string name="btn_rs">Kết thúc</string>
+    <string name="btn_back">&#60;</string>
+    <string name="btn_next">&#62;</string>
+    //Cau hoi 2
+    <string name="lbl_qs2">Noi dung cau hoi so 2:_______ </string>
+    //Cau hoi 3
+    <string name="lbl_qs3">Noi dung cau hoi so 3:_______ </string>
+    <string name="lbl_clause1">Mệnh đề 1 </string>
+    <string name="lbl_clause2">Mệnh đề 2 </string>
+    <string name="lbl_clause3">Mệnh đề 3 </string>
+
+    <string-array name="Choose_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    //Cau hoi 4
+    <string name="lbl_qs4">Noi dung cau hoi so 4:_______ </string>
+    <string name="tg_btn_true">Đúng</string>
+    <string name="tg_btn_false">Sai</string>
+    //Cau hoi 5
+    <string name="lbl_qs5">Noi dung cau hoi so 5:_______ </string>
+    <string name="btn_exit">Thoát</string>
+    //label
+    <string name="label_1">Câu hỏi 1</string>
+    <string name="label_2">Câu hỏi 2</string>
+    <string name="label_3">Câu hỏi 3</string>
+    <string name="label_4">Câu hỏi 4</string>
+    <string name="label_5">Câu hỏi 5</string>
+    <string name="ket_qua">Kết quả</string>
 </resources>

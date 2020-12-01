@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tracnghiemkhachquan">
+    package="tdc.edu.vn.tracnghiemkhachquan">
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/title_1"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TracNghiemKhachQuan">
-        <activity android:name=".MainActivity">
-            <intent-filter>
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Result_Activity"
+            android:label="@string/ket_qua" />
+        <activity
+            android:name=".Question5_Activity"
+            android:label="@string/label_5"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Question4_Activity"
+            android:label="@string/label_4"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Question3_Activity"
+            android:label="@string/label_3"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Question2_Activity"
+            android:label="@string/label_2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Question1_Activity"
 
+            android:screenOrientation="landscape">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
