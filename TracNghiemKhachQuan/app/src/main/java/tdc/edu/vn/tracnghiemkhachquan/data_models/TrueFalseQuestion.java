@@ -17,11 +17,16 @@ public class TrueFalseQuestion extends AbstractQuestion {
     }
 
     public void setQuestionChoice(String... questionChoice) {
-        Collections.addAll(this.questionChoice,questionChoice);
+        Collections.addAll(this.questionChoice, questionChoice);
     }
 
     @Override
     public int getPoint() {
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Câu " + (Question.questions.indexOf(this) + 1) + ": " + getPoint();
     }
 }

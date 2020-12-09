@@ -10,7 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Result_Activity"
-            android:label="@string/ket_qua" />
+            android:label="@string/ket_qua"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Question5_Activity"
             android:label="@string/label_5"

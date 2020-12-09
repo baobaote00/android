@@ -1,5 +1,7 @@
 package tdc.edu.vn.tracnghiemkhachquan.data_models;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -19,7 +21,7 @@ public class MatchingQuestion extends AbstractQuestion {
     }
 
     public void setQuestionChoiceA(String... questionChoiceA) {
-        Collections.addAll(this.questionChoiceA,questionChoiceA);
+        Collections.addAll(this.questionChoiceA, questionChoiceA);
     }
 
     public ArrayList<String> getQuestionChoiceB() {
@@ -27,11 +29,19 @@ public class MatchingQuestion extends AbstractQuestion {
     }
 
     public void setQuestionChoiceB(String... questionChoiceB) {
-        Collections.addAll(this.questionChoiceB,questionChoiceB);
+        Collections.addAll(this.questionChoiceB, questionChoiceB);
     }
 
     @Override
     public int getPoint() {
-        return 0;
+        for (int i: questionAnswers) {
+            Log.d("TAG:getPoint", "getPoint: "+ i);
+        }
+        return questionAnswers.equals(questionCorrect)?1:0;
+    }
+
+    @Override
+    public String toString() {
+        return "Câu " + (Question.questions.indexOf(this) + 1) + ": " + getPoint();
     }
 }

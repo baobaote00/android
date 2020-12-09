@@ -1,62 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/description"
+    <LinearLayout
+        android:id="@+id/fragmentLayout1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/lbl_qs1" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:orientation="vertical">
-
-        <CheckBox
-            android:id="@+id/CBChooseA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lbl_chooseA"
-            app:layout_constraintBottom_toTopOf="@+id/CBChooseC"
-            app:layout_constraintEnd_toStartOf="@+id/CBChooseB"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <CheckBox
-            android:id="@+id/CBChooseB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lbl_chooseB"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/CBChooseA"
-            app:layout_constraintTop_toTopOf="@+id/CBChooseA" />
-
-        <CheckBox
-            android:id="@+id/CBChooseC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lbl_chooseC"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/CBChooseA"
-            app:layout_constraintTop_toBottomOf="@+id/CBChooseA" />
-
-        <CheckBox
-            android:id="@+id/CBChooseD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lbl_chooseD"
-            app:layout_constraintStart_toStartOf="@+id/CBChooseB"
-            app:layout_constraintTop_toTopOf="@+id/CBChooseC" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="5"
+        android:orientation="horizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"

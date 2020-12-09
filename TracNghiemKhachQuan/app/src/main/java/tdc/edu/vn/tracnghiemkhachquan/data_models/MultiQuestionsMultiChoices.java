@@ -8,8 +8,8 @@ public class MultiQuestionsMultiChoices extends AbstractQuestion {
 
     public MultiQuestionsMultiChoices() {
         this.questionChoices = new ArrayList<>();
-        this.questionCorrect= new ArrayList<>();
-        this.questionAnswers=new ArrayList<>();
+        this.questionCorrect = new ArrayList<>();
+        this.questionAnswers = new ArrayList<>();
     }
 
     public void setQuestionChoices(String... questionChoices) {
@@ -22,19 +22,24 @@ public class MultiQuestionsMultiChoices extends AbstractQuestion {
 
     @Override
     public int getPoint() {
-        int point =0;
+        int point = 0;
 
-        if(questionAnswers.size()==questionCorrect.size()){
+        if (questionAnswers.size() == questionCorrect.size()) {
             int i;
-            for (i=0;i<questionCorrect.size();i++){
-                if (!questionCorrect.get(i).equals(questionAnswers.get(i))){
+            for (i = 0; i < questionCorrect.size(); i++) {
+                if (!questionCorrect.get(i).equals(questionAnswers.get(i))) {
                     break;
                 }
             }
-            if (i==questionCorrect.size()){
-                point=1;
+            if (i == questionCorrect.size()) {
+                point = 1;
             }
         }
         return point;
+    }
+
+    @Override
+    public String toString() {
+        return "Câu " + (Question.questions.indexOf(this) + 1) + ": " + getPoint();
     }
 }
