@@ -34,10 +34,19 @@ public class MatchingQuestion extends AbstractQuestion {
 
     @Override
     public int getPoint() {
-        for (int i: questionAnswers) {
-            Log.d("TAG:getPoint", "getPoint: "+ i);
+        int point = 0;
+        if (questionAnswers.size() == questionCorrect.size()) {
+            int i;
+            for (i = 0; i < questionCorrect.size(); i++) {
+                if (!questionCorrect.get(i).equals(questionAnswers.get(i))) {
+                    break;
+                }
+            }
+            if (i == questionCorrect.size()) {
+                point = 1;
+            }
         }
-        return questionAnswers.equals(questionCorrect)?1:0;
+        return point;
     }
 
     @Override

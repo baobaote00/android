@@ -22,7 +22,19 @@ public class TrueFalseQuestion extends AbstractQuestion {
 
     @Override
     public int getPoint() {
-        return 0;
+        int point = 0;
+        if (questionAnswers.size() == questionCorrect.size()) {
+            int i;
+            for (i = 0; i < questionCorrect.size(); i++) {
+                if (!questionCorrect.get(i).equals(questionAnswers.get(i))) {
+                    break;
+                }
+            }
+            if (i == questionCorrect.size()) {
+                point = 1;
+            }
+        }
+        return point;
     }
 
     @Override

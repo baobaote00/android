@@ -23,7 +23,6 @@ public class MultiQuestionsMultiChoices extends AbstractQuestion {
     @Override
     public int getPoint() {
         int point = 0;
-
         if (questionAnswers.size() == questionCorrect.size()) {
             int i;
             for (i = 0; i < questionCorrect.size(); i++) {

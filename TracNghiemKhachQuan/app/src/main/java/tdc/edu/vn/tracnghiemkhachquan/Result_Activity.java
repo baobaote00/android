@@ -1,11 +1,9 @@
 package tdc.edu.vn.tracnghiemkhachquan;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -44,7 +42,7 @@ public class Result_Activity extends AppCompatActivity {
 
         btnPre.setOnClickListener(v -> {
             Intent intent = getIntent();
-            intent.setClass(Result_Activity.this, Question5_Activity.class);
+            intent.setClass(Result_Activity.this, Question1_Activity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             startActivity(intent);
         });
