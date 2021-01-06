@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quản Lý Nhân Sự</string>
+    <string name="btnAdd">Add</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="lblName">Name</string>
+    <string name="lblDegree">Degree</string>
+    <string name="lblHobbies">Hobbies</string>
+    <string name="university">University</string>
+    <string name="college">College</string>
+    <string name="training">Training</string>
+    <string name="read">Read</string>
+    <string name="travel">Travel</string>
+    <string name="otherHobbies">Other hobbies</string>
+    <string name="chkUpdate">Update</string>
+    <string name="menuSave">Save</string>
+    <string name="menuRemove">Remove</string>
+    <string name="menuUpdate">Update</string>
+
+</resources>
