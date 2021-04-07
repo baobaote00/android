@@ -15,6 +15,23 @@ public class Player extends LinearLayout {
     private ImageView btnNext,btnPre,btnPause,btnStop,btnPlay;
     private ViewGroup playerLayout;
 
+    private final OnClickListener onClick = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (v.isSelected()) {
+                v.setSelected(false);
+            } else {
+                v.setSelected(true);
+                int count = playerLayout.getChildCount();
+                for (int i = 0; i < count; i++) {
+                    if (playerLayout.getChildAt(i).getId() != v.getId()) {
+                        playerLayout.getChildAt(i).setSelected(false);
+                    }
+                }
+            }
+        }
+    };
+
     public Player(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
@@ -35,6 +52,10 @@ public class Player extends LinearLayout {
         btnPlay = playerLayout.findViewById(R.id.btnPlay);
         btnPre = playerLayout.findViewById(R.id.btnPre);
         btnStop = playerLayout.findViewById(R.id.btnStop);
-
+        btnNext.setOnClickListener(onClick);
+        btnPause.setOnClickListener(onClick);
+        btnPlay.setOnClickListener(onClick);
+        btnPre.setOnClickListener(onClick);
+        btnStop.setOnClickListener(onClick);
     }
 }
