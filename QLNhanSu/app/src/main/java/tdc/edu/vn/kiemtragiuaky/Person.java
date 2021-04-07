@@ -7,6 +7,7 @@ public class Person {
     private String name;
     private String degree;
     private ArrayList<String> hobbies;
+    private boolean isCheck = false;
 
     public Person(){}
     public Person(String name, String degree, ArrayList<String> hobbies) {
@@ -44,6 +45,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setCheck(boolean isCheck){
+        this.isCheck = isCheck;
+    }
+
+    public Boolean getCheck(){
+        return isCheck;
     }
 
     @Override

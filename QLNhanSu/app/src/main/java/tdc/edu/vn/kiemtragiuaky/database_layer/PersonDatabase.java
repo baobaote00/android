@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 import tdc.edu.vn.kiemtragiuaky.Person;
 
 public class PersonDatabase extends SQLiteOpenHelper {
@@ -18,7 +20,6 @@ public class PersonDatabase extends SQLiteOpenHelper {
     private static final String NAME = "name";
     private static final String DEGREE = "degree";
     private static final String HOBBIES = "hobbies";
-
 
     public PersonDatabase(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -51,7 +52,7 @@ public class PersonDatabase extends SQLiteOpenHelper {
         db.insert(TABLE_NAME,null,value);
         db.close();
     }
-    public void savePerson(Person[] persons){
+    public void savePerson(ArrayList<Person> persons){
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues value = new ContentValues();

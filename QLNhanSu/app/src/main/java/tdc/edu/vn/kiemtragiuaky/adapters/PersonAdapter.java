@@ -1,9 +1,11 @@
 package tdc.edu.vn.kiemtragiuaky.adapters;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,10 +30,22 @@ public class PersonAdapter extends ArrayAdapter<Person> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = context.getLayoutInflater().inflate(R.layout.listview_item_layout, parent, false);
+        @SuppressLint("ViewHolder") View view = context.getLayoutInflater().inflate(R.layout.listview_item_layout, parent, false);
         ImageView degreeImage = view.findViewById(R.id.degreeImage);
         TextView lblName = view.findViewById(R.id.lblName);
         TextView lblHobbies = view.findViewById(R.id.lblHobbies);
+        CheckBox chkPerson = view.findViewById(R.id.chkUpdate);
+
+        chkPerson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (((CheckBox)v).isChecked()){
+                    objects.get(position).setCheck(true);
+                }else {
+                    objects.get(position).setCheck(false);
+                }
+            }
+        });
 
         Person person = objects.get(position);
 

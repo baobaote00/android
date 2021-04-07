@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Quan Ly Ban Hang</string>
+    <string name="hint_ngay_tao">Nhập Ngày Lập Phiếu</string>
+    <string name="hint_so_luong">Nhập Số Lượng</string>
+    <string name="btn_them">Thêm</string>
+    <string name="btn_thoat">Thoát</string>
+    <string name="menu_luu">Lưu</string>
+    <string name="menu_doc">Đọc</string>
+    <string-array name="choose">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>

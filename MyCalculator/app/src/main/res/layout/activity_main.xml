@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/num0"
+            android:autofillHints="" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnKeyC"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/keyC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnBang"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum0"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum8" />
+
+        <Button
+            android:id="@+id/btnNum0"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnKeyC"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum7" />
+
+        <Button
+            android:id="@+id/btnChia"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/chia"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnBang"
+            app:layout_constraintTop_toBottomOf="@+id/btnNhan" />
+
+        <Button
+            android:id="@+id/btnBang"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/bang"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnChia"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnKeyC"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum9" />
+
+        <Button
+            android:id="@+id/btnNum8"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num8"
+            app:layout_constraintBottom_toTopOf="@+id/btnKeyC"
+            app:layout_constraintEnd_toStartOf="@+id/btnNum9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum7"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum5"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnNum7"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num7"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum0"
+            app:layout_constraintEnd_toStartOf="@+id/btnNum8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum4"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnNhan"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/nhan"
+            app:layout_constraintBottom_toTopOf="@+id/btnChia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum9"
+            app:layout_constraintTop_toBottomOf="@+id/btnTru"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnNum9"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num9"
+            app:layout_constraintBottom_toTopOf="@+id/btnBang"
+            app:layout_constraintEnd_toStartOf="@+id/btnNhan"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum8"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum6"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnNum4"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num4"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum7"
+            app:layout_constraintEnd_toStartOf="@+id/btnNum5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum1" />
+
+        <Button
+            android:id="@+id/btnTru"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/tru"
+            app:layout_constraintBottom_toTopOf="@+id/btnNhan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum6"
+            app:layout_constraintTop_toBottomOf="@+id/btnCong" />
+
+        <Button
+            android:id="@+id/btnNum6"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num6"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum9"
+            app:layout_constraintEnd_toStartOf="@+id/btnTru"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum5"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum3" />
+
+        <Button
+            android:id="@+id/btnNum1"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num1"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum4"
+            app:layout_constraintEnd_toStartOf="@+id/btnNum2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnNum2"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num2"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum5"
+            app:layout_constraintEnd_toStartOf="@+id/btnNum3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnNum3"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num3"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum6"
+            app:layout_constraintEnd_toStartOf="@+id/btnCong"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCong"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/cong"
+            app:layout_constraintBottom_toTopOf="@+id/btnTru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnNum5"
+            style="@style/BaseTextViewStyle"
+            android:text="@string/num5"
+            app:layout_constraintBottom_toTopOf="@+id/btnNum8"
+            app:layout_constraintEnd_toStartOf="@+id/btnNum6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNum4"
+            app:layout_constraintTop_toBottomOf="@+id/btnNum2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
