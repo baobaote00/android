@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    android:gravity="center"
+    android:background="@drawable/player_bg">
+
+    <ImageView
+        android:id="@+id/btnPrev"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/prev"
+        android:clickable="true"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:id="@+id/btnPlay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/play"
+        android:clickable="true"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:id="@+id/btnPause"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/pause"
+        android:clickable="true"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:id="@+id/btnStop"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/stop"
+        android:clickable="true"
+        android:scaleType="fitXY"/>
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/next"
+        android:clickable="true"
+        android:scaleType="fitXY"/>
+</LinearLayout>

@@ -52,8 +52,8 @@ public class MultiQuestionMultiChoiceFragment extends AbstractFragment {
         List<CheckBox> cbs = Arrays.asList(cb1, cb2, cb3, cb4);
 
         description.setText(question.getQuestionDescription());
+        List<String> questionChoice = question.getQuestionChoices();
         for (int i = 0; i < cbs.size(); i++) {
-            List<String> questionChoice = question.getQuestionChoices();
             cbs.get(i).setText(questionChoice.get(i));
         }
 

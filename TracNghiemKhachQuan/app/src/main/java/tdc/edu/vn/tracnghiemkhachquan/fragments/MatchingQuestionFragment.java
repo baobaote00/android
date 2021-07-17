@@ -24,6 +24,7 @@ import tdc.edu.vn.tracnghiemkhachquan.data_models.Question;
 public class MatchingQuestionFragment extends AbstractFragment{
     private MatchingQuestion question;
     private Spinner sp1,sp2,sp3;
+
     @Override
     public void setQuestion(AbstractQuestion question) {
         this.question = (MatchingQuestion) question;
@@ -61,7 +62,7 @@ public class MatchingQuestionFragment extends AbstractFragment{
             cbs.get(i).setText(questionChoiceA.get(i));
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(), android.R.layout.simple_spinner_item,question.getQuestionChoiceB());
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(inflater.getContext(), android.R.layout.simple_spinner_item,question.getQuestionChoiceB());
         for (int i = 0; i < rbs.size(); i++) {
             rbs.get(i).setAdapter(adapter);
         }

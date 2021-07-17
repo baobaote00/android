@@ -44,21 +44,13 @@ public class Question1_Activity extends AppCompatActivity {
 
         btnNext.setOnClickListener(v -> {
             fragment.updateUserInteraction(questionID);
-            if (questionID == Question.questions.size() - 1) {
-                questionID = 0;
-            } else {
-                questionID++;
-            }
+            questionID = questionID == Question.questions.size() - 1 ? 0 : questionID + 1;
             updateUI();
         });
 
         btnPre.setOnClickListener(v -> {
             fragment.updateUserInteraction(questionID);
-            if (questionID == 0) {
-                questionID = Question.questions.size() - 1;
-            } else {
-                questionID--;
-            }
+            questionID = questionID == 0 ? Question.questions.size() - 1 : questionID - 1;
             updateUI();
         });
 
@@ -75,16 +67,16 @@ public class Question1_Activity extends AppCompatActivity {
         this.setTitle("cau hoi so: " + (questionID + 1));
         Fragment f = getSupportFragmentManager().findFragmentByTag(questionID + "");
         if (Question.questions.get(questionID) instanceof MultiQuestionsMultiChoices) {
-            fragment = f!=null?(MultiQuestionMultiChoiceFragment)f:new MultiQuestionMultiChoiceFragment();
-        }else if(Question.questions.get(questionID) instanceof  MultiQuestionOneChoice){
-            fragment = f!=null?(MultiQuestionOneChoiceFragment)f:new MultiQuestionOneChoiceFragment();
+            fragment = f != null ? (MultiQuestionMultiChoiceFragment) f : new MultiQuestionMultiChoiceFragment();
+        } else if (Question.questions.get(questionID) instanceof MultiQuestionOneChoice) {
+            fragment = f != null ? (MultiQuestionOneChoiceFragment) f : new MultiQuestionOneChoiceFragment();
         } else if (Question.questions.get(questionID) instanceof MatchingQuestion) {
-            fragment = f!=null?(MatchingQuestionFragment)f:new MatchingQuestionFragment();
+            fragment = f != null ? (MatchingQuestionFragment) f : new MatchingQuestionFragment();
         } else if (Question.questions.get(questionID) instanceof TrueFalseQuestion) {
             if (questionID % 2 != 0) {
-                fragment = f!=null?(TrueFalseQuestionFragmentA)f:new TrueFalseQuestionFragmentA();
+                fragment = f != null ? (TrueFalseQuestionFragmentA) f : new TrueFalseQuestionFragmentA();
             } else {
-                fragment = f!=null?(TrueFalseQuestionFragmentB)f:new TrueFalseQuestionFragmentB();
+                fragment = f != null ? (TrueFalseQuestionFragmentB) f : new TrueFalseQuestionFragmentB();
             }
         }
         fragment.setQuestion(Question.questions.get(questionID));
